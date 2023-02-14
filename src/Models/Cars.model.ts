@@ -36,9 +36,29 @@ export default class Car {
     
     return allCars;
   }
+
   public async getCarById(id: string) {
     const { ObjectId } = Types;
     const carById = await this._model.findById(new ObjectId(id));  
     return carById;
+  }
+
+  public async editingCarById(id: string, reqBody: ICar) {
+    const { ObjectId } = Types;
+
+    await this._model.findByIdAndUpdate(new ObjectId(id), {
+      model: reqBody.model,
+      year: reqBody.year,
+      color: reqBody.color,
+      status: reqBody.status,
+      buyValue: reqBody.buyValue,
+      doorsQty: reqBody.doorsQty,
+      seatsQty: reqBody.seatsQty,
+      
+    }, { new: true }); 
+
+    const car = await this._model.findById(new ObjectId(id), { __v: 0 });  
+    
+    return car;
   }
 }
