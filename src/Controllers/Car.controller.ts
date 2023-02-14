@@ -34,4 +34,30 @@ export default class CarController {
       this.next(error);
     }
   }
+
+  public async getCars() {
+    try {
+      const allCars = await this.service.getCars();
+      
+      return this.res.status(200).json(allCars);
+    } catch (error) {
+      this.next(error);
+    }
+  }
+
+  public async getCarById() {
+    try {
+      const { id } = this.req.params;
+      
+      const carById = await this.service.getCarById(id as string);
+      if (carById?.messageError) {
+        return this.res.status(carById.status).json({ message: carById?.messageError });
+      }
+      if (carById?.message) {
+        return this.res.status(carById.status).json(carById.message[0]);
+      }
+    } catch (error) {
+      this.res.status(422).json({ message: 'Invalid mongo id' });
+    }
+  }
 }
