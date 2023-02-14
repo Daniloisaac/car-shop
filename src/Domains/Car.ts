@@ -1,7 +1,7 @@
 import ICar from '../Interfaces/ICar';
 
 export default class CarDomain {
-  protected id?: string ;
+  protected id?: string;
   protected model: string;
   protected year: number;
   protected color: string; 
@@ -21,12 +21,13 @@ export default class CarDomain {
     this.seatsQty = params.seatsQty;
   }
 
-  protected setId(id: string) {
+  protected set Id(id: string | undefined) {
     this.id = id;
   }
 
-  protected getId() {
-    return this.id;
+  protected get Id() {
+    const re = this.id;
+    return re;
   }
 
   protected setModel(model: string) {
@@ -53,11 +54,11 @@ export default class CarDomain {
     return this.color;
   }
 
-  protected setStatus(status: boolean) {
+  protected set Status(status: boolean | undefined) {
     this.status = status;
   }
 
-  protected getStatus() {
+  protected get Status() {
     return this.status;
   }
 
