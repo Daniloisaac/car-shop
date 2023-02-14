@@ -52,4 +52,24 @@ export default class CarService {
       return { status: 200, message: car };
     }
   }
+
+  public async editingCarById(id: string, reqBody: ICar) {
+    const carODM = new Car();
+    const editedCar = await carODM.editingCarById(id, reqBody);
+
+    if (!editedCar) return { status: 404, messageError: 'Car not found' }; 
+    
+    const car = [{
+      id: editedCar._id,
+      model: editedCar.model, 
+      year: editedCar.year,
+      color: editedCar.color,
+      status: editedCar.status,
+      buyValue: editedCar.buyValue, 
+      doorsQty: editedCar.doorsQty,
+      seatsQty: editedCar.seatsQty,
+    }];
+    
+    return { status: 200, message: car };
+  }
 }
