@@ -3,9 +3,10 @@ import {
   Model,
   model,
   models,
+  Types,
 } from 'mongoose';
 
-import ICar from '../Interfaces/ICar';
+import ICar from '../Interfaces/ICar';  
 
 export default class Car {
   private _schema: Schema; 
@@ -26,6 +27,18 @@ export default class Car {
   }
 
   public async create(car:ICar): Promise<ICar> {
-    return this._model.create({ ...car });
+    const createCar = await this._model.create({ ...car });
+    return createCar;
+  }
+
+  public async getCars() {
+    const allCars = await this._model.find({}, { __v: 0 });
+    
+    return allCars;
+  }
+  public async getCarById(id: string) {
+    const { ObjectId } = Types;
+    const carById = await this._model.findById(new ObjectId(id));  
+    return carById;
   }
 }
