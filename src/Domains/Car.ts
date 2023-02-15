@@ -26,8 +26,7 @@ export default class CarDomain {
   }
 
   protected get Id() {
-    const re = this.id;
-    return re;
+    return this.id;
   }
 
   protected setModel(model: string) {
