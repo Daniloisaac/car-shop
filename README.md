@@ -1,13 +1,35 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# projeto Car Shop
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+O projeto Car Shop, é uma api com os princípios de Programação Orientada a Objetos (POO) para gerenciar uma concessionária de veículos. utilizando o banco de dados MongoDB através do framework do Mongoose.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# tecnologias usadas
+
+* ![MongoDB][mongoDB.io]
+* ![Typescript][Typescript]
+* ![Express][Express.js]
+* ![chai][chai.io]
+* ![eslint][eslint]
+* ![jest][jest]
+* ![mocha][mocha]
+* ![sinon][sinon]
+
+[MongoDB.io]: https://img.shields.io/badge/mongodb-47A248?style=for-the-badge&logo=mongodb&logoColor=white
+
+[Typescript]: https://img.shields.io/badge/Typescript-0769AD?style=for-the-badge&logo=Typescript&logoColor=white
+
+[Express.js]: https://img.shields.io/badge/Express-35495E?style=for-the-badge&logo=Express&logoColor=4FC08D
+
+[chai.io]: https://img.shields.io/badge/chai-DD0031?style=for-the-badge&logo=chai&logoColor=white
+
+[eslint]: https://img.shields.io/badge/eslint-4b32c3?style=for-the-badge&logo=eslint&logoColor=8080f2
+
+[jest]: https://img.shields.io/badge/jest-FF2D20?style=for-the-badge&logo=jest&logoColor=white
+
+[mocha]: https://img.shields.io/badge/mocha-563D7C?style=for-the-badge&logo=mocha&logoColor=white
+
+[sinon]: https://img.shields.io/badge/sinon-995f44?style=for-the-badge&logo=sinon&logoColor=white
+
+# iniciando projeto
+
+1- Instale as dependências
+* `npm install`
