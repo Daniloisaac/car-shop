@@ -29,7 +29,10 @@ O projeto Car Shop, é uma api com os princípios de Programação Orientada a O
 
 [sinon]: https://img.shields.io/badge/sinon-995f44?style=for-the-badge&logo=sinon&logoColor=white
 
-# iniciando projeto
+# minhas redes 
+Linkedin: <br>
+<a href="https://www.linkedin.com/in/danilo-isaac-0034b1238/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
 
-1- Instale as dependências
-* `npm install`
+Email: <br>
+<a href = "mailto:daniloisaac942@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+
